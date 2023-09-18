@@ -1,3 +1,5 @@
 public class Instructions {
-    System.out.println("Instructions:\nFigure it out yourself :)");
+    public void instruct() {
+        System.out.println("Instructions:\nFigure it out yourself :)");
+    }
 }
