@@ -1,6 +1,17 @@
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class Game {
+
+    public static void wait(int num) {
+        try {
+            TimeUnit.SECONDS.sleep(num);
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void main(String[] args) {
         Scanner blank = new Scanner(System.in);
         Scanner usefulBot = new Scanner(System.in);
@@ -11,9 +22,11 @@ public class Game {
 
         Beginning beginner = new Beginning();
         beginner.begin(userName);
-        enter = blank.nextLine();
+        String enter = blank.nextLine();
 
         System.out.println("If you need help, type 'help'.\nGood luck!\n");
+
+        wait(1);
 
         System.out.println("GAME BEGINS\n");
 
@@ -21,7 +34,8 @@ public class Game {
             
         }
         
-        
+        wait(1);
+
         Instructions instructor = new Instructions();
         instructor.instruct();
         enter = blank.nextLine();
